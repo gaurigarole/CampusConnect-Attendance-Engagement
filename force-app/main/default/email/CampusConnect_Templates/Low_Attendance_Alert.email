@@ -1,0 +1,15 @@
+Dear {!Student__c.Name},
+
+We hope this message finds you well. We are writing to inform you that your current attendance percentage is {!Student__c.Attendance_Percentage__c}%, which is below the required 75% threshold.
+
+Your current status has been updated to: {!Student__c.Status__c}
+
+To maintain good academic standing, please:
+1. Attend all upcoming classes regularly
+2. Contact your faculty advisor if you need assistance
+3. Review the attendance policy in your student handbook
+
+If you have any questions or concerns, please don't hesitate to reach out to the academic office.
+
+Best regards,
+CampusConnect Administration Team

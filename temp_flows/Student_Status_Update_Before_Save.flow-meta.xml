@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <description>Updates Student Status based on Attendance Percentage - Before Save</description>
+    <label>Student Status Update Before Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <decisions>
+        <name>Check_Attendance_Percentage</name>
+        <label>Check Attendance Percentage</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <defaultConnector>
+            <targetReference>Set_Status_Regular</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default - Regular</defaultConnectorLabel>
+        <rules>
+            <name>Attendance_Below_50</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Attendance_Percentage__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>50.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Attendance_Percentage__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Status_Probation</targetReference>
+            </connector>
+            <label>Attendance Below 50%</label>
+        </rules>
+        <rules>
+            <name>Attendance_Below_75</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Attendance_Percentage__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>75.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Attendance_Percentage__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>50.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Status_At_Risk</targetReference>
+            </connector>
+            <label>Attendance 50-74%</label>
+        </rules>
+    </decisions>
+    <assignments>
+        <name>Set_Status_At_Risk</name>
+        <label>Set Status At Risk</label>
+        <locationX>50</locationX>
+        <locationY>335</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>At Risk</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Status_Probation</name>
+        <label>Set Status Probation</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Probation</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Status_Regular</name>
+        <label>Set Status Regular</label>
+        <locationX>302</locationX>
+        <locationY>335</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Regular</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Attendance_Percentage</targetReference>
+        </connector>
+        <object>Student__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

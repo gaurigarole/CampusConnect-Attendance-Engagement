@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Low_Attendance_Email</name>
+        <label>Send Low Attendance Email</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Student_Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>CampusConnect: Attendance Alert - Action Required</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <stringValue>Dear {!$Record.Name},
+
+We hope this message finds you well. We are writing to inform you that your current attendance percentage is {!$Record.Attendance_Percentage__c}%, which is below the required 75% threshold.
+
+Your current status has been updated to: {!$Record.Status__c}
+
+To maintain good academic standing, please:
+1. Attend all upcoming classes regularly
+2. Contact your faculty advisor if you need assistance
+3. Review the attendance policy in your student handbook
+
+If you have any questions or concerns, please don&apos;t hesitate to reach out to the academic office.
+
+Best regards,
+CampusConnect Administration Team</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Attendance_Percentage</name>
+        <label>Check Attendance Percentage</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Attendance_Below_75</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Attendance_Percentage__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>75.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Attendance_Percentage__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Student_Status_At_Risk</targetReference>
+            </connector>
+            <label>Attendance Below 75%</label>
+        </rules>
+    </decisions>
+    <description>DEPRECATED - Replaced by Student_Status_Update_Before_Save and Student_Email_Alert_After_Save</description>
+    <label>Student Attendance Alert Flow (DEPRECATED)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Student_Status_At_Risk</name>
+        <label>Update Student Status At Risk</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <connector>
+            <targetReference>Send_Low_Attendance_Email</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>At Risk</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Attendance_Percentage</targetReference>
+        </connector>
+        <object>Student__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>
