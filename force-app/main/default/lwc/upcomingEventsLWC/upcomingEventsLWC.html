@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Upcoming Events (Next 7 Days)" icon-name="standard:event">
+        <div class="slds-p-around_medium">
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error">
+                    <span class="slds-assistive-text">Error</span>
+                    <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small">
+                        <lightning-icon icon-name="utility:error" size="x-small"></lightning-icon>
+                    </span>
+                    <h2>Error loading events</h2>
+                </div>
+            </template>
+            <template if:true={hasEvents}>
+                <ul class="slds-has-dividers_around slds-p-vertical_x-small">
+                    <template for:each={events} for:item="e">
+                        <li key={e.Id} class="slds-item slds-p-around_small slds-grid slds-grid_align-spread">
+                            <div>
+                                <span class="slds-text-title_bold">{e.Name}</span>
+                                <div class={e.statusClass}>{e.Status__c}</div>
+                                <div class="slds-text-body_small">{e.Date__c}</div>
+                            </div>
+                            <div>
+                                <lightning-button variant="base" label="View" data-id={e.Id} onclick={viewEvent}></lightning-button>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            <template if:true={showEmpty}>
+                <div class="slds-text-align_center slds-p-vertical_medium">
+                    <lightning-icon icon-name="utility:event" size="small"></lightning-icon>
+                    <p>No upcoming events in the next 7 days.</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

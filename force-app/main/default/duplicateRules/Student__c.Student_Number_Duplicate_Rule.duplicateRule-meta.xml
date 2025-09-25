@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Block</actionOnUpdate>
+    <alertText>Duplicate student number detected. Student numbers must be unique.</alertText>
+    <description>Prevents duplicate students based on student number</description>
+    <duplicateRuleFilter>
+        <booleanFilter>1</booleanFilter>
+        <duplicateRuleFilterItems>
+            <field>Student_Number__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Student__c</matchRuleSObjectType>
+        <matchingRule>Student_Number_Match_Rule</matchingRule>
+        <objectMapping>
+            <inputObject>Student__c</inputObject>
+            <mappingFields>
+                <inputField>Student_Number__c</inputField>
+                <outputField>Student_Number__c</outputField>
+            </mappingFields>
+            <outputObject>Student__c</outputObject>
+        </objectMapping>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Student Number Duplicate Rule</masterLabel>
+    <securityOption>EnforceSharingRules</securityOption>
+    <sObjectType>Student__c</sObjectType>
+    <sortOrder>2</sortOrder>
+</DuplicateRule>

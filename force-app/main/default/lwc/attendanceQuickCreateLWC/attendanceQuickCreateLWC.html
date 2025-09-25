@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="New Attendance Entry" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-record-form
+                object-api-name={objectApiName}
+                fields={fields}
+                mode="edit"
+                density="comfy"
+                onsuccess={handleSuccess}
+                onerror={handleError}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

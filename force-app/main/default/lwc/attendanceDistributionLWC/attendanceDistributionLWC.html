@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Attendance Distribution" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error">
+                    <span class="slds-assistive-text">Error</span>
+                    <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small">
+                        <lightning-icon icon-name="utility:error" size="x-small"></lightning-icon>
+                    </span>
+                    <h2>Error loading distribution</h2>
+                </div>
+            </template>
+
+            <div class="slds-grid slds-wrap slds-grid_align-spread">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-text-align_center">
+                    <lightning-progress-ring value={regularPct} size="large" variant="base" title="Regular"></lightning-progress-ring>
+                    <div class="slds-m-top_x-small slds-text-color_success">{regularPct}% Regular</div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-text-align_center">
+                    <lightning-progress-ring value={atRiskPct} size="large" variant="warning" label="At Risk"></lightning-progress-ring>
+                    <div class="slds-m-top_x-small slds-text-color_error">{atRiskPct}% At Risk</div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-text-align_center">
+                    <lightning-progress-ring value={probationPct} size="large" variant="expired" label="Probation"></lightning-progress-ring>
+                    <div class="slds-m-top_x-small slds-text-color_error">{probationPct}% Probation</div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

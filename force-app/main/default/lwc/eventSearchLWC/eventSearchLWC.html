@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Event Search" icon-name="standard:event">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-gutters slds-m-bottom_small">
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input type="date" label="Start Date" value={startDate} onchange={handleStartDateChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input type="date" label="End Date" value={endDate} onchange={handleEndDateChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-3 slds-p-top_medium slds-text-align_right">
+                    <lightning-button label="Search" variant="brand" onclick={handleSearchClick} disabled={isSearchDisabled}></lightning-button>
+                </div>
+            </div>
+
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error">
+                    <span class="slds-assistive-text">Error</span>
+                    <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small">
+                        <lightning-icon icon-name="utility:error" size="x-small"></lightning-icon>
+                    </span>
+                    <h2>Error loading events</h2>
+                </div>
+            </template>
+
+            <template if:true={events.length}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={events}
+                    columns={columns}
+                    onsort={handleSort}
+                    sorted-by={sortedBy}
+                    sorted-direction={sortedDirection}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column
+                    is-loading={isLoading}>
+                </lightning-datatable>
+            </template>
+
+            <template if:true={showNoResults}>
+                <div class="slds-text-align_center slds-p-vertical_medium">
+                    <lightning-icon icon-name="utility:event" size="small"></lightning-icon>
+                    <p>No events found for the selected date range.</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

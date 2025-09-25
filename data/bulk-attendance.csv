@@ -1,0 +1,101 @@
+Student__c,Course__c,Date__c,Status__c,Notes__c
+STU001,CS101,2024-08-26,Present,Participated actively in discussion
+STU001,CS101,2024-08-28,Present,Completed lab assignment
+STU001,CS101,2024-08-30,Absent,Sick leave
+STU001,CS101,2024-09-02,Present,Made up missed work
+STU001,CS101,2024-09-04,Present,Good understanding of concepts
+STU002,BUS101,2024-08-26,Present,Asked insightful questions
+STU002,BUS101,2024-08-28,Present,Group presentation leader
+STU002,BUS101,2024-08-30,Present,Excellent participation
+STU002,BUS101,2024-09-02,Present,Submitted assignment early
+STU002,BUS101,2024-09-04,Present,Strong analytical skills
+STU003,ENG201,2024-08-26,Present,Contributed to class discussion
+STU003,ENG201,2024-08-28,Present,Completed reading assignment
+STU003,ENG201,2024-08-30,Present,Participated in group work
+STU003,ENG201,2024-09-02,Late,Arrived 10 minutes late
+STU003,ENG201,2024-09-04,Present,Caught up on material
+STU004,PSY101,2024-08-26,Present,Engaged in lecture
+STU004,PSY101,2024-08-28,Present,Completed lab exercise
+STU004,PSY101,2024-08-30,Present,Good note-taking
+STU004,PSY101,2024-09-02,Present,Asked relevant questions
+STU004,PSY101,2024-09-04,Present,Strong participation
+STU005,MATH301,2024-08-26,Present,Solved complex problems
+STU005,MATH301,2024-08-28,Present,Helped other students
+STU005,MATH301,2024-08-30,Present,Excellent problem-solving
+STU005,MATH301,2024-09-02,Present,Completed bonus problems
+STU005,MATH301,2024-09-04,Present,Outstanding performance
+STU006,BIO101,2024-08-26,Present,Active lab participation
+STU006,BIO101,2024-08-28,Present,Detailed lab notes
+STU006,BIO101,2024-08-30,Present,Good observation skills
+STU006,BIO101,2024-09-02,Present,Completed specimen analysis
+STU006,BIO101,2024-09-04,Present,Strong understanding
+STU007,CHEM201,2024-08-26,Present,Careful lab technique
+STU007,CHEM201,2024-08-28,Present,Accurate measurements
+STU007,CHEM201,2024-08-30,Present,Good safety practices
+STU007,CHEM201,2024-09-02,Present,Completed synthesis
+STU007,CHEM201,2024-09-04,Present,Excellent lab report
+STU008,ENG101,2024-08-26,Present,Creative writing sample
+STU008,ENG101,2024-08-28,Present,Thoughtful analysis
+STU008,ENG101,2024-08-30,Present,Good peer feedback
+STU008,ENG101,2024-09-02,Present,Revised draft submitted
+STU008,ENG101,2024-09-04,Present,Final paper excellent
+STU009,PHY301,2024-08-26,Present,Complex calculations
+STU009,PHY301,2024-08-28,Present,Lab experiment success
+STU009,PHY301,2024-08-30,Present,Theoretical understanding
+STU009,PHY301,2024-09-02,Present,Problem set completed
+STU009,PHY301,2024-09-04,Present,Outstanding work
+STU010,ART101,2024-08-26,Present,Creative project started
+STU010,ART101,2024-08-28,Present,Good technique development
+STU010,ART101,2024-08-30,Present,Artistic vision clear
+STU010,ART101,2024-09-02,Present,Project progressing well
+STU010,ART101,2024-09-04,Present,Final piece impressive
+STU011,POLI201,2024-08-26,Present,Engaged in debate
+STU011,POLI201,2024-08-28,Present,Research presentation
+STU011,POLI201,2024-08-30,Present,Policy analysis strong
+STU011,POLI201,2024-09-02,Present,Current events discussion
+STU011,POLI201,2024-09-04,Present,Critical thinking evident
+STU012,SOC101,2024-08-26,Present,Social theory understanding
+STU012,SOC101,2024-08-28,Present,Field observation completed
+STU012,SOC101,2024-08-30,Present,Data analysis accurate
+STU012,SOC101,2024-09-02,Present,Research methods applied
+STU012,SOC101,2024-09-04,Present,Excellent final report
+STU013,ECON201,2024-08-26,Present,Market analysis insightful
+STU013,ECON201,2024-08-28,Present,Economic model understanding
+STU013,ECON201,2024-08-30,Present,Case study well done
+STU013,ECON201,2024-09-02,Present,Statistical analysis correct
+STU013,ECON201,2024-09-04,Present,Strong economic reasoning
+STU014,COMM101,2024-08-26,Present,Public speaking improved
+STU014,COMM101,2024-08-28,Present,Media analysis thoughtful
+STU014,COMM101,2024-08-30,Present,Group project leadership
+STU014,COMM101,2024-09-02,Present,Presentation skills strong
+STU014,COMM101,2024-09-04,Present,Communication effective
+STU015,HIST201,2024-08-26,Present,Historical analysis deep
+STU015,HIST201,2024-08-28,Present,Primary source research
+STU015,HIST201,2024-08-30,Present,Timeline project accurate
+STU015,HIST201,2024-09-02,Present,Essay writing improved
+STU015,HIST201,2024-09-04,Present,Historical thinking evident
+STU016,PHIL101,2024-08-26,Present,Logical reasoning strong
+STU016,PHIL101,2024-08-28,Present,Ethical argument well-crafted
+STU016,PHIL101,2024-08-30,Present,Philosophical discussion leader
+STU016,PHIL101,2024-09-02,Present,Critical analysis excellent
+STU016,PHIL101,2024-09-04,Present,Abstract thinking developed
+STU017,CS201,2024-08-26,Present,Advanced programming concepts
+STU017,CS201,2024-08-28,Present,Algorithm implementation
+STU017,CS201,2024-08-30,Present,Code optimization successful
+STU017,CS201,2024-09-02,Present,Software design principles
+STU017,CS201,2024-09-04,Present,Project milestone achieved
+STU018,BUS201,2024-08-26,Present,Business strategy analysis
+STU018,BUS201,2024-08-28,Present,Financial modeling accurate
+STU018,BUS201,2024-08-30,Present,Market research thorough
+STU018,BUS201,2024-09-02,Present,Case study presentation
+STU018,BUS201,2024-09-04,Present,Strategic thinking evident
+STU019,ENG301,2024-08-26,Present,Advanced engineering concepts
+STU019,ENG301,2024-08-28,Present,Design project initiated
+STU019,ENG301,2024-08-30,Present,Technical calculations correct
+STU019,ENG301,2024-09-02,Present,Prototype development
+STU019,ENG301,2024-09-04,Present,Engineering solution innovative
+STU020,PSY201,2024-08-26,Present,Research methodology understanding
+STU020,PSY201,2024-08-28,Present,Data collection completed
+STU020,PSY201,2024-08-30,Present,Statistical analysis accurate
+STU020,PSY201,2024-09-02,Present,Research findings presented
+STU020,PSY201,2024-09-04,Present,Psychology principles applied

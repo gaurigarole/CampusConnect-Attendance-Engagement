@@ -141,3 +141,64 @@ Phase 4 implements comprehensive process automation using Salesforce's declarati
 ---
 
 If you have any questions or want to extend to Phase 5 (e.g., Lightning Web Components, custom apps, or advanced integrations), open an issue or start a new phase work item.
+
+---
+
+## 🚀 Phase 6: User Interface Development
+
+This phase adds a Campus Dashboard, searchable students and events, an At-Risk students view, and a Utility Bar for quick actions.
+
+### Components Added
+
+- `force-app/main/default/lwc/studentSearchLWC/` – Search by Name or Roll No; color indicators for Status; row actions to View or Select; sortable columns.
+- `force-app/main/default/lwc/atRiskStudentsLWC/` – Card view of students with `Status__c = At Risk` including email and attendance %.
+- `force-app/main/default/lwc/eventSearchLWC/` – Search events by date range; enroll the selected student (creates an `Attendance__c`); sortable columns.
+- `force-app/main/default/lwc/upcomingEventsLWC/` – Lists scheduled events in next 7 days.
+- `force-app/main/default/lwc/attendanceDistributionLWC/` – Progress rings showing Regular vs At Risk vs Probation counts.
+- `force-app/main/default/lwc/campusDashboardLWC/` – Container dashboard coordinating student selection and event enrollment.
+- `force-app/main/default/lwc/dashboardQuickLinksLWC/` – Quick links for New Student and New Attendance.
+- `force-app/main/default/lwc/attendanceQuickCreateLWC/` – Utility bar quick create form for Attendance; also available as an Event record quick action.
+- `force-app/main/default/lwc/quickNotesLWC/` – Utility bar notes and Help link.
+
+### Apex
+
+- `force-app/main/default/classes/StudentController.cls` – `searchStudents`, `getAtRiskStudents`, `getAttendanceDistribution` (+ tests in `StudentControllerTest.cls`).
+- `force-app/main/default/classes/EventController.cls` – `searchEvents`, `getScheduledEventsWithin7Days`, `enrollStudentInEvent` (+ tests in `EventControllerTest.cls`).
+
+### Lightning Pages
+
+- App Page: `force-app/main/default/flexipages/Campus_Dashboard.flexipage-meta.xml` (uses `campusDashboardLWC`).
+- Home Page: `force-app/main/default/flexipages/Campus_Home.flexipage-meta.xml` (assign as Home for the app).
+- Student Record Page: `force-app/main/default/flexipages/Student_Record_Page.flexipage-meta.xml` (Highlights + Related Lists).
+- Event Record Page: `force-app/main/default/flexipages/Event_Record_Page.flexipage-meta.xml` (Highlights + Related Lists).
+- Utility Bar: `force-app/main/default/flexipages/Campus_UtilityBar.flexipage-meta.xml` (Quick Notes, Attendance Quick Create). Linked in `applications/CampusConnect.app-meta.xml`.
+
+### Deploy
+
+1. Authenticate to your org (if not already):
+   - `sf org login web -a campusconnect-dev`
+2. Deploy all metadata:
+   - `sf project deploy start -d force-app -o campusconnect-dev`
+3. Run Apex tests (ensures >75% coverage):
+   - `sf apex run test -o campusconnect-dev -c -r human -w 10`
+
+### Activate in Lightning App Builder
+
+1. Campus Home as Home page
+   - Setup → App Builder → Open `Campus Home` → Activate → Assign as App Default → Choose `CampusConnect`.
+2. Campus Dashboard App Page (optional tab)
+   - Setup → App Builder → Open `Campus Dashboard` → Save (you can create a Lightning Page tab to add to nav if desired).
+3. Record pages
+   - Setup → App Builder → Open `Student Record Page` → Activate → Assign as App Default for `CampusConnect`.
+   - Setup → App Builder → Open `Event Record Page` → Activate → Assign as App Default for `CampusConnect`.
+4. Utility Bar
+   - The application `CampusConnect` already references `Campus_UtilityBar`. Confirm under Setup → App Manager → CampusConnect → Edit → Utility Bar.
+
+### Navigation & Tabs
+
+- The `CampusConnect` app navigation is ordered with `Home` first, then `Students`, `Attendance Records`, `Faculties`, `Courses`, `Events`, `Lectures`, and `StudentCourse__c`.
+
+### Usage Tips
+
+- On the dashboard, select a student in `StudentSearchLWC`, then use `EventSearchLWC` to enroll them—this creates an `Attendance__c` and navigates you to it.
+- Quick actions live in the Utility Bar: create attendance and take notes; the card links to Salesforce Help.

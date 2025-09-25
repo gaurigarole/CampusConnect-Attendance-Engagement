@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Quick Notes" icon-name="utility:note">
+        <div class="slds-p-around_medium">
+            <lightning-textarea label="Notes" value={notes} onchange={handleChange} placeholder="Type your reminder here..."></lightning-textarea>
+            <div class="slds-m-top_small slds-text-align_right">
+                <lightning-button label="Clear" onclick={clearNotes} class="slds-m-right_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Save" onclick={saveNotes}></lightning-button>
+            </div>
+            <div class="slds-m-top_small">
+                <lightning-formatted-url value="https://help.salesforce.com/s/" label="CampusConnect Help (Salesforce KB)" target="_blank"></lightning-formatted-url>
+            </div>
+        </div>
+    </lightning-card>
+</template>

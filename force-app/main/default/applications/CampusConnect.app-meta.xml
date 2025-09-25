@@ -13,6 +13,7 @@
     <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>CampusConnect</label>
     <navType>Standard</navType>
+    <tabs>standard-home</tabs>
     <tabs>Student__c</tabs>
     <tabs>Attendance__c</tabs>
     <tabs>Faculty__c</tabs>

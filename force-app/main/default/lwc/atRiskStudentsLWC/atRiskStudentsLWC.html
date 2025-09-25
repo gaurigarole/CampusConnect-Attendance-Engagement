@@ -1,0 +1,53 @@
+<template>
+    <lightning-card title="At-Risk Students" icon-name="standard:contact">
+        <div slot="actions">
+            <lightning-badge label={students.length} class="slds-theme_warning"></lightning-badge>
+        </div>
+        <div class="slds-p-around_medium">
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error">
+                    <span class="slds-assistive-text">Error</span>
+                    <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small">
+                        <lightning-icon icon-name="utility:error" size="x-small"></lightning-icon>
+                    </span>
+                    <h2>Error loading at-risk students</h2>
+                </div>
+            </template>
+
+            <template if:true={hasStudents}>
+                <div class="slds-grid slds-wrap slds-gutters">
+                    <template for:each={students} for:item="s">
+                        <div key={s.Id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+                            <div class="slds-card slds-m-bottom_small slds-p-around_small">
+                                <div class="slds-grid slds-grid_align-spread slds-m-bottom_x-small">
+                                    <div class="slds-truncate" title={s.Name}>
+                                        <lightning-icon icon-name="standard:contact" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                        <strong>{s.Name}</strong>
+                                    </div>
+                                    <span class={s.statusClass}>At Risk</span>
+                                </div>
+                                <div class="slds-text-body_small slds-m-bottom_x-small">
+                                    Roll No: {s.Roll_No__c}
+                                </div>
+                                <div class="slds-grid slds-grid_align-spread slds-m-bottom_x-small">
+                                    <span>Email: {s.Student_Email__c}</span>
+                                    <span class="slds-text-color_error">{s.Attendance_Percentage__c}%</span>
+                                </div>
+                                <div class="slds-text-align_right">
+                                    <lightning-button label="View" variant="base" data-id={s.Id} onclick={handleView}></lightning-button>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <template if:true={showEmpty}>
+                <div class="slds-text-align_center slds-p-vertical_medium">
+                    <lightning-icon icon-name="utility:success" size="small"></lightning-icon>
+                    <p>No at-risk students found.</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

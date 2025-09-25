@@ -1,0 +1,51 @@
+Name,Event_Date__c,Event_Time__c,Event_Type__c,Location__c,Description__c,Max_Capacity__c,Status__c
+Freshman Orientation,2024-08-15,09:00,Academic,Main Auditorium,Welcome orientation for new students,500,Scheduled
+Computer Science Workshop,2024-08-20,14:00,Workshop,Tech Lab 101,Introduction to Programming Fundamentals,30,Scheduled
+Career Fair 2024,2024-09-05,10:00,Career,Student Center,Annual career networking event,1000,Scheduled
+Biology Lab Safety Training,2024-08-25,11:00,Training,Science Building Lab 205,Mandatory safety training for biology students,25,Scheduled
+Student Government Elections,2024-09-10,08:00,Social,Campus Wide,Annual student government voting,2000,Scheduled
+Mathematics Tutoring Session,2024-08-30,16:00,Academic,Library Study Room A,Calculus and Statistics help,15,Scheduled
+Engineering Design Competition,2024-09-15,13:00,Competition,Engineering Building,Annual design challenge,100,Scheduled
+Psychology Research Presentation,2024-09-01,15:30,Academic,Psychology Building Room 301,Student research presentations,50,Scheduled
+Business Networking Mixer,2024-09-08,18:00,Social,Business School Lounge,Professional networking event,75,Scheduled
+Chemistry Lab Practical,2024-09-12,10:00,Exam,Chemistry Lab 102,Hands-on chemistry assessment,20,Scheduled
+Art Exhibition Opening,2024-09-18,19:00,Cultural,Art Gallery,Student artwork showcase,200,Scheduled
+Physics Lecture Series,2024-09-03,14:30,Academic,Physics Auditorium,Guest speaker on quantum mechanics,150,Scheduled
+Literature Book Club,2024-08-28,17:00,Social,Library Conference Room,Monthly book discussion,12,Scheduled
+Economics Case Study Workshop,2024-09-07,13:30,Workshop,Business Building Room 205,Real-world economic analysis,40,Scheduled
+History Documentary Screening,2024-09-14,20:00,Cultural,History Department Theater,World War II documentary,80,Scheduled
+Pre-Med Information Session,2024-08-22,12:00,Academic,Science Building Auditorium,Medical school preparation guidance,100,Scheduled
+Campus Blood Drive,2024-09-20,09:00,Community Service,Student Health Center,Annual blood donation drive,150,Scheduled
+Philosophy Debate Tournament,2024-09-11,16:30,Competition,Liberal Arts Building,Ethical dilemma debates,60,Scheduled
+Environmental Science Field Trip,2024-09-25,08:00,Academic,Off-Campus,Local ecosystem study,25,Scheduled
+Music Department Recital,2024-09-17,19:30,Cultural,Music Hall,Student performance showcase,300,Scheduled
+International Student Welcome,2024-08-18,15:00,Social,International Center,Cultural orientation and networking,80,Scheduled
+Robotics Club Demo,2024-09-04,18:30,Workshop,Engineering Lab 301,Latest robotics projects demonstration,45,Scheduled
+Creative Writing Workshop,2024-08-26,14:00,Workshop,English Department Lounge,Poetry and prose writing techniques,20,Scheduled
+Alumni Homecoming Game,2024-10-05,14:00,Sports,Football Stadium,Annual homecoming football game,15000,Scheduled
+Graduate School Fair,2024-09-22,11:00,Career,Student Union Ballroom,Graduate program information,300,Scheduled
+Sustainability Summit,2024-09-28,09:30,Academic,Environmental Science Building,Campus sustainability initiatives,120,Scheduled
+Theater Production Auditions,2024-08-29,18:00,Cultural,Theater Arts Building,Fall semester play auditions,50,Scheduled
+Finance Investment Simulation,2024-09-13,15:00,Workshop,Business Computer Lab,Stock market trading simulation,35,Scheduled
+Community Garden Planting,2024-09-21,10:00,Community Service,Campus Community Garden,Seasonal planting volunteer event,40,Scheduled
+Research Symposium,2024-10-02,13:00,Academic,Main Conference Center,Undergraduate research presentations,250,Scheduled
+Dance Performance Showcase,2024-09-19,20:30,Cultural,Performing Arts Center,Student choreography presentations,400,Scheduled
+Study Abroad Information Fair,2024-08-31,12:30,Academic,International Programs Office,Study abroad program options,60,Scheduled
+Volunteer Appreciation Dinner,2024-09-26,18:30,Social,Dining Hall Private Room,Recognition for campus volunteers,100,Scheduled
+Technology Innovation Expo,2024-10-01,10:30,Workshop,Technology Center,Student tech project showcase,200,Scheduled
+Mental Health Awareness Week,2024-09-23,11:30,Workshop,Counseling Center,Mental health resources and support,75,Scheduled
+Intramural Sports Kickoff,2024-08-27,17:30,Sports,Recreation Center,Fall semester sports league registration,300,Scheduled
+Academic Success Workshop,2024-09-06,13:00,Academic,Academic Success Center,Study skills and time management,50,Scheduled
+Cultural Heritage Festival,2024-09-29,16:00,Cultural,Campus Quad,Multicultural celebration and food,800,Scheduled
+Leadership Development Seminar,2024-09-16,14:30,Workshop,Leadership Center,Student leadership skills training,40,Scheduled
+Science Fair Judging,2024-10-03,09:00,Academic,Science Building Atrium,Student science project evaluation,30,Scheduled
+Finals Week Study Sessions,2024-12-10,19:00,Academic,Library All Floors,Group study and tutoring support,500,Scheduled
+Winter Break Send-off Party,2024-12-15,20:00,Social,Student Union,End of semester celebration,600,Scheduled
+Spring Semester Registration,2025-01-08,08:00,Academic,Registrar Office,Course registration assistance,200,Scheduled
+New Year Fitness Challenge,2025-01-15,07:00,Sports,Recreation Center,Campus-wide fitness program kickoff,150,Scheduled
+Martin Luther King Jr Day Service,2025-01-20,10:00,Community Service,Campus Wide,Day of service volunteer projects,400,Scheduled
+Valentine's Day Dance,2025-02-14,19:00,Social,Student Union Ballroom,Annual Valentine's themed dance,300,Scheduled
+Spring Career Expo,2025-02-28,10:00,Career,Convention Center,Spring semester job and internship fair,1200,Scheduled
+Women in STEM Conference,2025-03-08,09:00,Academic,Science and Engineering Buildings,International Women's Day STEM celebration,180,Scheduled
+Spring Break Safety Workshop,2025-03-01,16:00,Workshop,Student Life Office,Travel safety and wellness tips,80,Scheduled
+Earth Day Campus Cleanup,2025-04-22,08:30,Community Service,Campus Grounds,Environmental stewardship volunteer event,250,Scheduled
