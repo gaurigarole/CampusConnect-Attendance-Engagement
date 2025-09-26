@@ -120,105 +120,16 @@ A unified Salesforce platform that automates attendance, events, and engagement 
 
 ---
 
-📁 Project Structure
-CampusConnect/
-├── force-app/main/default/
-│   ├── classes/
-│   ├── lwc/
-│   ├── objects/
-│   ├── triggers/
-│   ├── flexipages/
-│   ├── permissionsets/
-│   └── flows/
-├── Phase 1/
-├── Phase 2/
-├── Phase 3/
-├── Phase 4/
-├── Phase 5/
-├── Phase 6/
-├── Phase 7/
-├── Phase 8/
-├── Phase 9/
-├── Phase 10/
-├── config/
-├── data/
-├── docs/
-├── manifest/
-├── scripts/
-└── temp_flows/
-
-💡 Usage Examples
-Attendance Management
-// Mark a student as present for an event
-Attendance__c att = new Attendance__c(
-    Student__c = 'a01XXXXXXXXXXXXXXX',
-    Event__c = 'a02XXXXXXXXXXXXXXX',
-    Status__c = 'Present',
-    Date__c = Date.today()
-);
-insert att;
-
-Bulk Event Registration
-List<Id> studentIds = new List<Id>{'studentId1', 'studentId2'};
-Id eventId = 'eventId';
-List<Registration__c> regs = EventRegistrationBatch.registerStudents(studentIds, eventId, false);
-
-AI Risk Scoring
-List<Id> studentIds = new List<Id>{'studentId1', 'studentId2'};
-StudentRiskAnalyzer.calculateRisk(studentIds);
-
-Email Notifications
-List<Id> studentIds = new List<Id>{'studentId1', 'studentId2'};
-SmartEmailSystem.sendAttendanceAlerts(studentIds);
-
-🔧 Deployment & Configuration
-Prerequisites
-Salesforce CLI (sf)
-
-Salesforce Dev Hub
-
-Node.js 18+ and npm
-
-Quick Start
-# 1. Login to your Dev Hub
-sf org login web --alias DevHub --set-default-dev-hub
-
-# 2. Create a new Scratch Org
-sf org create scratch --definition-file config/project-scratch-def.json --alias CampusConnectScratch --duration-days 7 --set-default
-
-# 3. Deploy the source code
-sf project deploy start --target-org CampusConnectScratch
-
-# 4. Assign the required Permission Sets
-sf org assign permset --name CampusConnect_Admin --target-org CampusConnectScratch
-
-# 5. Open your new Scratch Org
-sf org open --target-org CampusConnectScratch
-
-Post-Deploy Configuration
-Assign roles & permissions to users.
-
-Configure Lightning Record Pages.
-
-Enable the weekly summary scheduler.
-
-🟢 Colorful Action Buttons
-<p align="center">
-<a href="#">🌟 Dashboard</a> &nbsp;&nbsp;
-<a href="#">📝 Attendance</a> &nbsp;&nbsp;
-<a href="#">📅 Events</a> &nbsp;&nbsp;
-<a href="#">📊 Analytics</a> &nbsp;&nbsp;
-<a href="#">⚡ AI Insights</a>
-</p>
-
-🆘 Support
+### 🆘 Support
 Review documentation in the Phase [1-10]/ directories.
 
 Use Salesforce Trailhead for learning LWC and Apex.
 
 Use the Developer Console for debugging logs.
 
-🤝 Contributing
+---
+
+### 🤝 Contributing
 Fork the repository.
 
 Create a new feature branch: git checkout -b feature/amazing-feature
@@ -229,8 +140,12 @@ Push to the branch: git push origin feature/amazing-feature
 
 Open a Pull Request.
 
-📄 License
+---
+
+### 📄 License
 CampusConnect is provided for educational and enterprise demonstration purposes.
+
+---
 
 <p align="center">
 Built with ❤️ using the Salesforce Lightning Platform
