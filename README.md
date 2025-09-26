@@ -120,34 +120,16 @@ A unified Salesforce platform that automates attendance, events, and engagement 
 
 ---
 
-## 📁 Project Structure
+📁 Project Structure
 CampusConnect/
 ├── force-app/main/default/
-│ ├── classes/
-│ │ ├── AttendanceTriggerHandler.cls
-│ │ ├── EventRegistrationBatch.cls
-│ │ ├── StudentRiskAnalyzer.cls
-│ │ └── SmartEmailSystem.cls
-│ ├── lwc/
-│ │ ├── attendanceDashboard/
-│ │ ├── eventRegistration/
-│ │ ├── lowAttendanceAlerts/
-│ │ └── studentSelector/
-│ ├── objects/
-│ │ ├── Student__c/
-│ │ ├── Attendance__c/
-│ │ ├── Event__c/
-│ │ ├── Registration__c/
-│ │ └── Feedback__c/
-│ ├── triggers/
-│ │ └── AttendanceTrigger.trigger
-│ ├── flexipages/
-│ │ └── Event_Record_Page.flexipage-meta.xml
-│ ├── permissionsets/
-│ │ ├── CampusConnect_Admin.permissionset-meta.xml
-│ │ └── CampusConnect_Manager.permissionset-meta.xml
-│ └── flows/
-│ └── Send_Event_Invitations.flow-meta.xml
+│   ├── classes/
+│   ├── lwc/
+│   ├── objects/
+│   ├── triggers/
+│   ├── flexipages/
+│   ├── permissionsets/
+│   └── flows/
 ├── Phase 1/
 ├── Phase 2/
 ├── Phase 3/
@@ -165,30 +147,30 @@ CampusConnect/
 ├── scripts/
 └── temp_flows/
 
----
-
-## 💡 Usage Examples
-
-### Attendance Management
-```apex
-// Mark student present
+💡 Usage Examples
+Attendance Management
+// Mark a student as present for an event
 Attendance__c att = new Attendance__c(
-    Student__c = 'a01...',
-    Event__c = 'a02...',
+    Student__c = 'a01XXXXXXXXXXXXXXX',
+    Event__c = 'a02XXXXXXXXXXXXXXX',
     Status__c = 'Present',
     Date__c = Date.today()
 );
 insert att;
 
 Bulk Event Registration
-
+List<Id> studentIds = new List<Id>{'studentId1', 'studentId2'};
+Id eventId = 'eventId';
 List<Registration__c> regs = EventRegistrationBatch.registerStudents(studentIds, eventId, false);
+
 AI Risk Scoring
-
+List<Id> studentIds = new List<Id>{'studentId1', 'studentId2'};
 StudentRiskAnalyzer.calculateRisk(studentIds);
-Email Notifications
 
+Email Notifications
+List<Id> studentIds = new List<Id>{'studentId1', 'studentId2'};
 SmartEmailSystem.sendAttendanceAlerts(studentIds);
+
 🔧 Deployment & Configuration
 Prerequisites
 Salesforce CLI (sf)
@@ -198,58 +180,57 @@ Salesforce Dev Hub
 Node.js 18+ and npm
 
 Quick Start
-
-# Login to Dev Hub
+# 1. Login to your Dev Hub
 sf org login web --alias DevHub --set-default-dev-hub
 
-# Create Scratch Org
+# 2. Create a new Scratch Org
 sf org create scratch --definition-file config/project-scratch-def.json --alias CampusConnectScratch --duration-days 7 --set-default
 
-# Deploy source
+# 3. Deploy the source code
 sf project deploy start --target-org CampusConnectScratch
 
-# Assign Permission Sets
+# 4. Assign the required Permission Sets
 sf org assign permset --name CampusConnect_Admin --target-org CampusConnectScratch
 
-# Open org
+# 5. Open your new Scratch Org
 sf org open --target-org CampusConnectScratch
+
 Post-Deploy Configuration
-Assign roles & permissions
+Assign roles & permissions to users.
 
-Configure Lightning Record Pages
+Configure Lightning Record Pages.
 
-Enable weekly summary scheduler
+Enable the weekly summary scheduler.
 
-🟢 Colorful Action Buttons (Markdown Style)
-🌟 Dashboard    📝 Attendance    📅 Events    📊 Analytics    ⚡ AI Insights
+🟢 Colorful Action Buttons
+<p align="center">
+<a href="#">🌟 Dashboard</a> &nbsp;&nbsp;
+<a href="#">📝 Attendance</a> &nbsp;&nbsp;
+<a href="#">📅 Events</a> &nbsp;&nbsp;
+<a href="#">📊 Analytics</a> &nbsp;&nbsp;
+<a href="#">⚡ AI Insights</a>
+</p>
 
 🆘 Support
-For help:
+Review documentation in the Phase [1-10]/ directories.
 
-Review documentation in Phase [1-10]/
+Use Salesforce Trailhead for learning LWC and Apex.
 
-Salesforce Trailhead for LWC and Apex
-
-Developer Console for debugging
+Use the Developer Console for debugging logs.
 
 🤝 Contributing
-Fork the repository
+Fork the repository.
 
-Create a feature branch: git checkout -b feature/amazing-feature
+Create a new feature branch: git checkout -b feature/amazing-feature
 
-Commit changes: git commit -m 'Add amazing feature'
+Commit your changes: git commit -m 'Add amazing new feature'
 
-Push: git push origin feature/amazing-feature
+Push to the branch: git push origin feature/amazing-feature
 
-Open a Pull Request
+Open a Pull Request.
 
 📄 License
 CampusConnect is provided for educational and enterprise demonstration purposes.
 
-Built with ❤️ using Salesforce Lightning Platform
-
-
-**Email:** gaurigarole19@gmail.com  
-
----
-
+<p align="center">
+Built with ❤️ using the Salesforce Lightning Platform
