@@ -165,9 +165,6 @@ CampusConnect/
 ├── scripts/
 └── temp_flows/
 
-yaml
-Copy code
-
 ---
 
 ## 💡 Usage Examples
@@ -182,17 +179,15 @@ Attendance__c att = new Attendance__c(
     Date__c = Date.today()
 );
 insert att;
+
 Bulk Event Registration
-apex
-Copy code
+
 List<Registration__c> regs = EventRegistrationBatch.registerStudents(studentIds, eventId, false);
 AI Risk Scoring
-apex
-Copy code
+
 StudentRiskAnalyzer.calculateRisk(studentIds);
 Email Notifications
-apex
-Copy code
+
 SmartEmailSystem.sendAttendanceAlerts(studentIds);
 🔧 Deployment & Configuration
 Prerequisites
@@ -203,8 +198,7 @@ Salesforce Dev Hub
 Node.js 18+ and npm
 
 Quick Start
-bash
-Copy code
+
 # Login to Dev Hub
 sf org login web --alias DevHub --set-default-dev-hub
 
