@@ -3,7 +3,14 @@
 ![API Version](https://img.shields.io/badge/API%20Version-Latest-brightgreen)  
 ![License](https://img.shields.io/badge/License-Educational-orange)  
 
-CampusConnect is a **Salesforce-based student management platform** designed to **streamline attendance tracking, event management, and student engagement monitoring**. It provides **faculty and administrators** with actionable insights to identify at-risk students, manage courses, and maintain secure records. 🚀
+CampusConnect is a next-gen **Salesforce CRM solution** for higher education that streamlines **student management, faculty coordination, attendance tracking, and event engagement**.  
+Built with **Lightning Web Components (LWC)**, powerful **Apex automation**, and **real-time dashboards**, it empowers campuses with smarter decision-making.  
+
+---
+## 🎥 Project Demo  
+📺 **Live Demo Video:** [CampusConnect System Walkthrough](https://drive.google.com/file/d/1CBoI1GV6qiP_kZP-8bwXLvo7M5cogsb2/view?usp=drivesdk)  
+
+*Watch the complete system demonstration showcasing all features, user interfaces, and workflows in action.*  
 
 ---
 
