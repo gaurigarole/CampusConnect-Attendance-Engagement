@@ -29,79 +29,232 @@ CampusConnect centralizes student data, automates attendance tracking, and integ
 
 ---
 
-## 🌟 Key Features
-
-- **Student Management** 👩‍🎓  
-  - Add, view, and manage student records  
-  - Track roll number, email, attendance %, and enrolled courses  
-
-- **Event & Attendance Management** 📅  
-  - Create and manage campus events  
-  - Real-time attendance tracking with visual progress rings  
-  - Low Attendance Alerts for students below 75%  
-
-- **Integrations & Automation** 🔗  
-  - Secure API-based verification for students and courses  
-  - Platform Events for at-risk student notifications  
-  - Change Data Capture for automated updates  
-
-- **Data Management** 💾  
-  - Bulk data import using Data Import Wizard & Data Loader  
-  - Duplicate prevention rules to ensure data integrity  
-  - Weekly automated backups with restore documentation  
-
-- **Reporting & Dashboards** 📊  
-  - Attendance distribution dashboards  
-  - At-risk student reports  
-  - Dynamic dashboards filtered by faculty  
-
-- **Security & Access Control** 🔒  
-  - Sharing rules for controlled record access  
-  - Field-level security for sensitive data  
-  - Session timeout & login IP restrictions  
-  - Audit trail for tracking changes  
-
-- **Deployment & DevOps** ⚡  
-  - VS Code + SFDX for deployment  
-  - Unmanaged packages for sandbox deployment  
-  - Command-line & ANT migration tool support  
+## 🌟 Core System Features
+- **Attendance Management:** Real-time tracking, alerts for at-risk students, and automated notifications.
+- **Event Management:** Event creation, registration workflows, and post-event feedback collection.
+- **AI Insights:** Student risk scoring, engagement prediction, and attendance analytics.
+- **Automation:** Apex triggers for capacity, attendance updates, and task creation.
+- **Analytics:** Real-time dashboards and reports for administrators and faculty.
+- **Integration:** Web-to-Lead forms, batch processing, and email notifications.
 
 ---
 
-## 🧩 System Design
-
-- **Front-end:** Lightning Web Components (LWC) for intuitive UI  
-- **Back-end:** Apex classes for business logic & integrations  
-- **Data Layer:** Salesforce objects (Student, Event, Attendance, Course)  
-- **Automation:** Platform Events, Change Data Capture, Scheduled Jobs  
-- **Integrations:** External APIs for verification & synchronization  
-
----
-
-## 📋 User Guide
-
-- **Campus Dashboard:** Attendance overview & at-risk students list  
-- **Student Search:** View student profile, attendance, courses, and alerts  
-- **Event Search:** Manage and enroll students in events  
-- **Quick Actions:** Mark Attendance, Send Email  
-- **Reports & Dashboards:** Analyze attendance trends and student risk  
-- **Backup & Restore:** Run automated weekly backups to ensure data safety  
+## 📚 Documentation & Guides
+- **Phase 1:** Requirements & Analysis → `Phase 1/Phase_1.pdf`
+- **Phase 2:** Data Model & Architecture → `Phase 2/Phase_2.pdf`
+- **Phase 3:** Business Logic & Automation → `Phase 3/Phase_3.pdf`
+- **Phase 4:** Batch Processing & Scheduling → `Phase 4/`
+- **Phase 5:** Testing & Quality Assurance → `Phase 5/`
+- **Phase 6:** User Interface Development → `Phase 6/`
+- **Phase 7:** Integration & Workflows → `Phase 7/`
+- **Phase 8:** Deployment & Data Management → `Phase 8/`
+- **Phase 9:** Analytics & Security → `Phase 9/`
+- **Phase 10:** AI Insights & Optimization → `Phase 10/`
+- **Security Guide:** `docs/Security_Configuration_Guide.md`
+- **Data Management:** `data/Data_Loader_Configuration_Guide.md`
+- **Sample Data:** `data/sample_data.csv`
 
 ---
 
-## 🎯 Benefits
+## 🏢 Project Overview
+**Industry:** Higher Education / Campus Management  
+**Project Type:** B2C Salesforce CRM Implementation  
+**Target Users:** Teachers, Students, Administrators, Academic Coordinators  
 
-- Centralized student & event management  
-- Early identification of at-risk students  
-- Secure and controlled data access  
-- Scalable, professional Salesforce deployment  
-- Automated processes reduce errors and improve efficiency  
+**Problem Statement:**  
+Educational institutions struggle with manual attendance tracking, fragmented event management, and lack of actionable insights. This causes:
+
+- Mismanagement of student engagement and attendance  
+- Poor visibility into academic performance  
+- Delays in notifications and feedback loops  
+- Inefficient lead nurturing for events and courses  
+
+**CampusConnect Solution:**  
+A unified Salesforce platform that automates attendance, events, and engagement with AI-driven insights and seamless UI.
 
 ---
 
-## 📧 Contact
+## 🚀 Key Features
 
-**Developer:** Gauri Garole  
+### 📊 Core Data Model
+- **Student__c:** Tracks student details, preferences, and attendance history  
+- **Attendance__c:** Daily attendance tracking with status and notes  
+- **Event__c:** Complete lifecycle of campus events, capacity, and registration  
+- **Registration__c:** Junction object connecting students with events  
+- **Feedback__c:** Event feedback and ratings  
+- **AI_Insights__c:** Stores AI-generated risk scores and engagement predictions  
+
+### ⚡ Intelligent Automation
+- **AttendanceTrigger:** Auto updates student attendance and alerts faculty  
+- **EventRegistrationBatch:** Bulk student registrations with validation  
+- **SmartEmailSystem:** Dynamic emails based on attendance and registration  
+- **TaskCreation:** Automatic task assignments for follow-ups  
+- **LeadConversion:** Convert prospects/registrations to student records automatically  
+
+### 🎨 Modern User Interface (Lightning Web Components)
+- **attendanceDashboard:** Real-time student attendance analytics  
+- **eventRegistration:** Bulk event registration with CSV import  
+- **lowAttendanceAlerts:** Proactive alerts for low attendance events  
+- **studentSelector:** AI-powered student targeting for notifications  
+
+### 🤖 AI-Powered Features
+- **Student Risk Scoring:** Predict at-risk students using historical attendance & engagement  
+- **Event Recommendations:** Suggest events based on student interests  
+- **Capacity Optimization:** Predict optimal student-event allocations  
+- **A/B Testing Framework:** Optimize registration workflows and notifications  
+
+### 📧 Marketing & Engagement
+- **Web-to-Lead Integration:** Capture prospective students or event attendees  
+- **Email Campaigns:** Targeted invitations, reminders, and follow-ups  
+- **Lead Nurturing:** Automatic workflows for engagement & conversion  
+
+### 📈 Analytics & Reporting
+- **Dashboards:** Real-time attendance and event performance  
+- **Custom Reports:** Attendance trends, student engagement, event registrations  
+- **Revenue & Capacity Tracking:** Track event fees and capacity utilization  
+
+### 🔐 Enterprise Security
+- **Role-Based Access:** Admin, Teacher, Coordinator roles with granular permissions  
+- **GDPR Compliance:** Data privacy and consent management  
+- **IP Restrictions:** Security for admin and sensitive access  
+
+---
+
+## 📁 Project Structure
+CampusConnect/
+├── force-app/main/default/
+│ ├── classes/
+│ │ ├── AttendanceTriggerHandler.cls
+│ │ ├── EventRegistrationBatch.cls
+│ │ ├── StudentRiskAnalyzer.cls
+│ │ └── SmartEmailSystem.cls
+│ ├── lwc/
+│ │ ├── attendanceDashboard/
+│ │ ├── eventRegistration/
+│ │ ├── lowAttendanceAlerts/
+│ │ └── studentSelector/
+│ ├── objects/
+│ │ ├── Student__c/
+│ │ ├── Attendance__c/
+│ │ ├── Event__c/
+│ │ ├── Registration__c/
+│ │ └── Feedback__c/
+│ ├── triggers/
+│ │ └── AttendanceTrigger.trigger
+│ ├── flexipages/
+│ │ └── Event_Record_Page.flexipage-meta.xml
+│ ├── permissionsets/
+│ │ ├── CampusConnect_Admin.permissionset-meta.xml
+│ │ └── CampusConnect_Manager.permissionset-meta.xml
+│ └── flows/
+│ └── Send_Event_Invitations.flow-meta.xml
+├── Phase 1/
+├── Phase 2/
+├── Phase 3/
+├── Phase 4/
+├── Phase 5/
+├── Phase 6/
+├── Phase 7/
+├── Phase 8/
+├── Phase 9/
+├── Phase 10/
+├── config/
+├── data/
+├── docs/
+├── manifest/
+├── scripts/
+└── temp_flows/
+
+yaml
+Copy code
+
+---
+
+## 💡 Usage Examples
+
+### Attendance Management
+```apex
+// Mark student present
+Attendance__c att = new Attendance__c(
+    Student__c = 'a01...',
+    Event__c = 'a02...',
+    Status__c = 'Present',
+    Date__c = Date.today()
+);
+insert att;
+Bulk Event Registration
+apex
+Copy code
+List<Registration__c> regs = EventRegistrationBatch.registerStudents(studentIds, eventId, false);
+AI Risk Scoring
+apex
+Copy code
+StudentRiskAnalyzer.calculateRisk(studentIds);
+Email Notifications
+apex
+Copy code
+SmartEmailSystem.sendAttendanceAlerts(studentIds);
+🔧 Deployment & Configuration
+Prerequisites
+Salesforce CLI (sf)
+
+Salesforce Dev Hub
+
+Node.js 18+ and npm
+
+Quick Start
+bash
+Copy code
+# Login to Dev Hub
+sf org login web --alias DevHub --set-default-dev-hub
+
+# Create Scratch Org
+sf org create scratch --definition-file config/project-scratch-def.json --alias CampusConnectScratch --duration-days 7 --set-default
+
+# Deploy source
+sf project deploy start --target-org CampusConnectScratch
+
+# Assign Permission Sets
+sf org assign permset --name CampusConnect_Admin --target-org CampusConnectScratch
+
+# Open org
+sf org open --target-org CampusConnectScratch
+Post-Deploy Configuration
+Assign roles & permissions
+
+Configure Lightning Record Pages
+
+Enable weekly summary scheduler
+
+🟢 Colorful Action Buttons (Markdown Style)
+🌟 Dashboard    📝 Attendance    📅 Events    📊 Analytics    ⚡ AI Insights
+
+🆘 Support
+For help:
+
+Review documentation in Phase [1-10]/
+
+Salesforce Trailhead for LWC and Apex
+
+Developer Console for debugging
+
+🤝 Contributing
+Fork the repository
+
+Create a feature branch: git checkout -b feature/amazing-feature
+
+Commit changes: git commit -m 'Add amazing feature'
+
+Push: git push origin feature/amazing-feature
+
+Open a Pull Request
+
+📄 License
+CampusConnect is provided for educational and enterprise demonstration purposes.
+
+Built with ❤️ using Salesforce Lightning Platform
+
+
 **Email:** gaurigarole19@gmail.com  
 
 ---
