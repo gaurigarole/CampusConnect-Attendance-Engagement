@@ -1,4 +1,7 @@
 # 🎓 CampusConnect
+![Salesforce](https://img.shields.io/badge/Salesforce-Lightning-blue)  
+![API Version](https://img.shields.io/badge/API%20Version-Latest-brightgreen)  
+![License](https://img.shields.io/badge/License-Educational-orange)  
 
 CampusConnect is a **Salesforce-based student management platform** designed to **streamline attendance tracking, event management, and student engagement monitoring**. It provides **faculty and administrators** with actionable insights to identify at-risk students, manage courses, and maintain secure records. 🚀
 
