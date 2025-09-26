@@ -147,5 +147,5 @@ CampusConnect is provided for educational and enterprise demonstration purposes.
 
 ---
 
-<p align="center">
+### <p align="center">
 Built with ❤️ using the Salesforce Lightning Platform
