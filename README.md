@@ -58,10 +58,11 @@ CampusConnect/
 ├── eslint.config.js       
 ├── jest.config.js         
 ├── package.json           
-├── sf project deploy ...  
+├── sf project deploy 
 └── sfdx-project.json
 
 ---
+
 
 ## 🌟 Key Features
 
