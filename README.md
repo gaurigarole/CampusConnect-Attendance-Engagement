@@ -28,41 +28,6 @@ Built with **Lightning Web Components (LWC)**, powerful **Apex automation**, and
 CampusConnect centralizes student data, automates attendance tracking, and integrates **external verification systems**. Built using **Lightning Web Components (LWC)**, **Apex classes**, and Salesforce automation tools, it delivers a **scalable and user-friendly solution** for educational institutions. 🏫
 
 ---
-## 📁 Project Structure  
-
-```plaintext
-CampusConnect/
-├── .husky/                # Husky config
-├── .vscode/               # VS Code settings
-├── Phase 1/               # Requirement Analysis
-├── Phase 2/               # Data Model & System Design
-├── Phase 3/               # Automation & Apex
-├── Phase 4/               # Deployment
-├── Phase 5/               # Testing
-├── Phase 6/               # UI Development
-├── Phase 7/               # LWC Components
-├── Phase 8/               # Reports, Dashboards, Security
-├── Phase 9/               # Final Documentation
-├── config/                
-├── data/                  # Demo datasets
-├── docs/                  # Documentation files
-├── force-app/main/default # Salesforce source files
-├── manifest/              
-├── scripts/               
-├── temp_flows/            
-├── .forceignore           
-├── .gitignore             
-├── .prettierignore        
-├── .prettierrc            
-├── README.md              
-├── eslint.config.js       
-├── jest.config.js         
-├── package.json           
-├── sf project deploy 
-└── sfdx-project.json
-
----
-
 
 ## 🌟 Key Features
 
