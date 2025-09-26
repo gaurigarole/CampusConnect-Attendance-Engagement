@@ -83,7 +83,7 @@ CampusConnect centralizes student data, automates attendance tracking, and integ
 ## 📧 Contact
 
 **Developer:** Gauri Garole  
-**Email:** gaurigarole19559@agentforce.com  
+**Email:** gaurigarole19@gmail.com  
 
 ---
 
