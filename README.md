@@ -147,5 +147,8 @@ CampusConnect is provided for educational and enterprise demonstration purposes.
 
 ---
 
-### <p align="center">
+ <p align="center">
 Built with ❤️ using the Salesforce Lightning Platform
+
+Contact: <a href="mailto:gaurigarole19@gmail.com">gaurigarole19@gmail.com</a>
+</p>
