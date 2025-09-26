@@ -59,8 +59,9 @@ CampusConnect/
 ├── jest.config.js         
 ├── package.json           
 ├── sf project deploy ...  
-└── sfdx-project.json      
+└── sfdx-project.json
 
+---
 
 ## 🌟 Key Features
 
