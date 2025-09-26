@@ -1,0 +1,51 @@
+First_Name__c,Last_Name__c,Email__c,Student_Number__c,Phone__c,Date_of_Birth__c,Status__c,Major__c,Year__c,GPA__c
+John,Smith,john.smith@university.edu,STU001,555-0101,1998-03-15,Active,Computer Science,Sophomore,3.5
+Sarah,Johnson,sarah.johnson@university.edu,STU002,555-0102,1999-07-22,Active,Business Administration,Freshman,3.8
+Michael,Brown,michael.brown@university.edu,STU003,555-0103,1997-11-08,Active,Engineering,Junior,3.2
+Emily,Davis,emily.davis@university.edu,STU004,555-0104,1998-09-12,Active,Psychology,Sophomore,3.7
+David,Wilson,david.wilson@university.edu,STU005,555-0105,1996-05-30,Active,Mathematics,Senior,3.9
+Jessica,Miller,jessica.miller@university.edu,STU006,555-0106,1999-01-18,Active,Biology,Freshman,3.4
+Christopher,Garcia,christopher.garcia@university.edu,STU007,555-0107,1997-08-25,Active,Chemistry,Junior,3.6
+Amanda,Martinez,amanda.martinez@university.edu,STU008,555-0108,1998-12-03,Active,English Literature,Sophomore,3.3
+Joshua,Anderson,joshua.anderson@university.edu,STU009,555-0109,1996-10-14,Active,Physics,Senior,3.8
+Ashley,Taylor,ashley.taylor@university.edu,STU010,555-0110,1999-04-07,Active,Art History,Freshman,3.5
+Matthew,Thomas,matthew.thomas@university.edu,STU011,555-0111,1997-06-19,Active,Political Science,Junior,3.4
+Brittany,Jackson,brittany.jackson@university.edu,STU012,555-0112,1998-02-28,Active,Sociology,Sophomore,3.6
+Daniel,White,daniel.white@university.edu,STU013,555-0113,1996-09-11,Active,Economics,Senior,3.7
+Megan,Harris,megan.harris@university.edu,STU014,555-0114,1999-08-16,Active,Communications,Freshman,3.2
+Ryan,Martin,ryan.martin@university.edu,STU015,555-0115,1997-12-05,Active,History,Junior,3.5
+Lauren,Thompson,lauren.thompson@university.edu,STU016,555-0116,1998-05-23,Active,Philosophy,Sophomore,3.8
+Kevin,Garcia,kevin.garcia@university.edu,STU017,555-0117,1996-03-09,Active,Computer Science,Senior,3.9
+Nicole,Martinez,nicole.martinez@university.edu,STU018,555-0118,1999-11-27,Active,Business Administration,Freshman,3.3
+Brandon,Robinson,brandon.robinson@university.edu,STU019,555-0119,1997-07-14,Active,Engineering,Junior,3.6
+Stephanie,Clark,stephanie.clark@university.edu,STU020,555-0120,1998-01-31,Active,Psychology,Sophomore,3.4
+Tyler,Rodriguez,tyler.rodriguez@university.edu,STU021,555-0121,1996-08-18,Active,Mathematics,Senior,3.7
+Rachel,Lewis,rachel.lewis@university.edu,STU022,555-0122,1999-06-04,Active,Biology,Freshman,3.5
+Justin,Lee,justin.lee@university.edu,STU023,555-0123,1997-10-21,Active,Chemistry,Junior,3.2
+Samantha,Walker,samantha.walker@university.edu,STU024,555-0124,1998-04-08,Active,English Literature,Sophomore,3.8
+Jonathan,Hall,jonathan.hall@university.edu,STU025,555-0125,1996-12-15,Active,Physics,Senior,3.6
+Kayla,Allen,kayla.allen@university.edu,STU026,555-0126,1999-09-02,Active,Art History,Freshman,3.3
+Nathan,Young,nathan.young@university.edu,STU027,555-0127,1997-05-29,Active,Political Science,Junior,3.7
+Chelsea,Hernandez,chelsea.hernandez@university.edu,STU028,555-0128,1998-11-16,Active,Sociology,Sophomore,3.4
+Jacob,King,jacob.king@university.edu,STU029,555-0129,1996-07-03,Active,Economics,Senior,3.9
+Alexis,Wright,alexis.wright@university.edu,STU030,555-0130,1999-03-20,Active,Communications,Freshman,3.5
+Andrew,Lopez,andrew.lopez@university.edu,STU031,555-0131,1997-01-07,Active,History,Junior,3.2
+Taylor,Hill,taylor.hill@university.edu,STU032,555-0132,1998-08-24,Active,Philosophy,Sophomore,3.6
+Zachary,Scott,zachary.scott@university.edu,STU033,555-0133,1996-04-11,Active,Computer Science,Senior,3.8
+Hannah,Green,hannah.green@university.edu,STU034,555-0134,1999-12-28,Active,Business Administration,Freshman,3.3
+Austin,Adams,austin.adams@university.edu,STU035,555-0135,1997-09-15,Active,Engineering,Junior,3.7
+Courtney,Baker,courtney.baker@university.edu,STU036,555-0136,1998-06-02,Active,Psychology,Sophomore,3.4
+Jordan,Gonzalez,jordan.gonzalez@university.edu,STU037,555-0137,1996-02-19,Active,Mathematics,Senior,3.5
+Danielle,Nelson,danielle.nelson@university.edu,STU038,555-0138,1999-10-06,Active,Biology,Freshman,3.8
+Cameron,Carter,cameron.carter@university.edu,STU039,555-0139,1997-04-23,Active,Chemistry,Junior,3.2
+Morgan,Mitchell,morgan.mitchell@university.edu,STU040,555-0140,1998-12-10,Active,English Literature,Sophomore,3.6
+Sean,Perez,sean.perez@university.edu,STU041,555-0141,1996-08-27,Active,Physics,Senior,3.9
+Kimberly,Roberts,kimberly.roberts@university.edu,STU042,555-0142,1999-05-14,Active,Art History,Freshman,3.3
+Eric,Turner,eric.turner@university.edu,STU043,555-0143,1997-11-01,Active,Political Science,Junior,3.7
+Michelle,Phillips,michelle.phillips@university.edu,STU044,555-0144,1998-07-18,Active,Sociology,Sophomore,3.4
+Trevor,Campbell,trevor.campbell@university.edu,STU045,555-0145,1996-03-05,Active,Economics,Senior,3.8
+Jasmine,Parker,jasmine.parker@university.edu,STU046,555-0146,1999-01-22,Active,Communications,Freshman,3.5
+Kyle,Evans,kyle.evans@university.edu,STU047,555-0147,1997-08-09,Active,History,Junior,3.2
+Vanessa,Edwards,vanessa.edwards@university.edu,STU048,555-0148,1998-04-26,Active,Philosophy,Sophomore,3.6
+Blake,Collins,blake.collins@university.edu,STU049,555-0149,1996-12-13,Active,Computer Science,Senior,3.7
+Tiffany,Stewart,tiffany.stewart@university.edu,STU050,555-0150,1999-09-30,Active,Business Administration,Freshman,3.4

@@ -1,0 +1,86 @@
+<template>
+    <div if:true={showAlert} class="alert-container">
+        <div class={alertVariant}>
+            <lightning-card class="alert-card">
+                <div class="alert-content slds-p-around_medium">
+                    <!-- Alert Header -->
+                    <div class="alert-header slds-grid slds-grid_align-spread slds-m-bottom_small">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <lightning-icon 
+                                icon-name={alertIcon} 
+                                size="small" 
+                                variant={alertVariant}
+                                class="slds-m-right_small">
+                            </lightning-icon>
+                            <h3 class="alert-title">{alertTitle}</h3>
+                        </div>
+                        <lightning-button-icon 
+                            icon-name="utility:close" 
+                            variant="bare" 
+                            onclick={handleDismissAlert}
+                            alternative-text="Dismiss alert">
+                        </lightning-button-icon>
+                    </div>
+
+                    <!-- Alert Message -->
+                    <div class="alert-message slds-m-bottom_medium">
+                        <p class="message-text">{alertMessage}</p>
+                    </div>
+
+                    <!-- Student Info Quick View -->
+                    <div class="student-info slds-grid slds-wrap slds-gutters_small slds-m-bottom_medium">
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="info-item">
+                                <span class="info-label">Student ID:</span>
+                                <span class="info-value">{studentNumber}</span>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="info-item">
+                                <span class="info-label">Current Attendance:</span>
+                                <span class="info-value attendance-percentage">{attendancePercentage}%</span>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="info-item">
+                                <span class="info-label">Required:</span>
+                                <span class="info-value">75%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="alert-actions slds-grid slds-grid_align-center slds-gutters_small">
+                        <div class="slds-col">
+                            <lightning-button 
+                                label="Send Warning Email" 
+                                variant="brand" 
+                                icon-name="utility:email"
+                                onclick={handleSendWarningEmail}
+                                class="action-button">
+                            </lightning-button>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-button 
+                                label="View Attendance History" 
+                                variant="neutral" 
+                                icon-name="utility:list"
+                                onclick={handleViewAttendanceHistory}
+                                class="action-button">
+                            </lightning-button>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-button 
+                                label="Dismiss" 
+                                variant="neutral" 
+                                icon-name="utility:check"
+                                onclick={handleDismissAlert}
+                                class="action-button">
+                            </lightning-button>
+                        </div>
+                    </div>
+                </div>
+            </lightning-card>
+        </div>
+    </div>
+</template>

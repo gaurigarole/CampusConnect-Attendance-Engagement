@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>NAME</field>
+    </columns>
+    <columns>
+        <field>Course_Name__c</field>
+    </columns>
+    <columns>
+        <field>Course_Code__c</field>
+    </columns>
+    <columns>
+        <field>Credits__c</field>
+    </columns>
+    <columns>
+        <field>Status__c</field>
+    </columns>
+    <description>Shows course information and enrollment capacity</description>
+    <format>Tabular</format>
+    <name>Course Enrollment Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Course__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

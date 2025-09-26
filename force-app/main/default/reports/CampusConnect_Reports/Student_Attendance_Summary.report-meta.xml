@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Student__c$Name</field>
+    </columns>
+    <columns>
+        <field>Student__c$Roll_No__c</field>
+    </columns>
+    <columns>
+        <field>Student__c$Student_Email__c</field>
+    </columns>
+    <columns>
+        <field>Student__c$Attendance_Percentage__c</field>
+    </columns>
+    <columns>
+        <field>Student__c$Status__c</field>
+    </columns>
+    <description>Shows attendance percentage for all students</description>
+    <format>Tabular</format>
+    <name>Student Attendance Summary</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Student_Attendance_Courses</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Student__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

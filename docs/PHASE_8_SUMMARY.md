@@ -8,6 +8,7 @@
 - **`data/bulk-attendance.csv`** - 100+ attendance records for Data Loader
 
 ### **🛡️ Duplicate Management**
+- **Manual Setup Guide** - `docs/DUPLICATE_RULES_SETUP.md` with step-by-step UI instructions
 - **Student Email Duplicate Rule** - Warns on duplicate emails (Allow with alert)
 - **Student Number Duplicate Rule** - Blocks duplicate student numbers (Block)
 - **Course Code Duplicate Rule** - Blocks duplicate course codes (Block)
@@ -21,18 +22,17 @@
 
 ### **📚 Documentation**
 - **`docs/DATA_IMPORT_GUIDE.md`** - Complete import instructions
+- **`docs/DUPLICATE_RULES_SETUP.md`** - Manual duplicate rules setup guide
 - **`docs/PACKAGE_MANAGEMENT.md`** - Unmanaged vs Managed package strategy
 - **`docs/PHASE_8_SUMMARY.md`** - This comprehensive summary
 
 ## 🚀 **Deployment Commands**
 
-### Deploy Duplicate Rules:
-```powershell
-sf project deploy start `
-  --source-dir force-app/main/default/duplicateRules `
-  --source-dir force-app/main/default/matchingRules `
-  --verbose
-```
+### Setup Duplicate Rules:
+**Manual Setup Required** - Follow `docs/DUPLICATE_RULES_SETUP.md` for UI-based configuration:
+1. Create 3 Matching Rules (Student Email, Student Number, Course Code)
+2. Create 3 Duplicate Rules (Student Email, Student Number, Course Code)
+3. Test duplicate detection with sample data
 
 ### Import Demo Data:
 1. **Data Import Wizard**: Use `data/demo-students.csv` (50 students)

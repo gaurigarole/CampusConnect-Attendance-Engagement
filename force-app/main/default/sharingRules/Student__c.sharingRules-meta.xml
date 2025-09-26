@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Faculty_Access_Active_Students</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Faculty can read active students in their courses</description>
+        <label>Faculty Access to Active Students</label>
+        <sharedTo>
+            <roleAndSubordinates>Faculty</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

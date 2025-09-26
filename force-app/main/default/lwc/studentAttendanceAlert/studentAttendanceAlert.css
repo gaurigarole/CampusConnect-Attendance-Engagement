@@ -1,0 +1,152 @@
+.alert-container {
+    margin-bottom: 16px;
+}
+
+.alert-card {
+    border-left: 4px solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error .alert-card {
+    border-left-color: #c23934;
+    background-color: #fef7f7;
+}
+
+.warning .alert-card {
+    border-left-color: #fe9339;
+    background-color: #fefaf7;
+}
+
+.alert-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 12px;
+}
+
+.alert-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.error .alert-title {
+    color: #c23934;
+}
+
+.warning .alert-title {
+    color: #fe9339;
+}
+
+.alert-message {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+.message-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.student-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info-label {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.attendance-percentage {
+    color: #c23934;
+    font-size: 16px;
+}
+
+.warning .attendance-percentage {
+    color: #fe9339;
+}
+
+.alert-actions {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 12px;
+}
+
+.action-button {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .alert-actions {
+        flex-direction: column;
+    }
+    
+    .alert-actions .slds-col {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .student-info {
+        flex-direction: column;
+    }
+    
+    .student-info .slds-col {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+
+/* Animation */
+.alert-container {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for critical alerts */
+.error .alert-card {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 2px 4px rgba(194, 57, 52, 0.1);
+    }
+    50% {
+        box-shadow: 0 4px 8px rgba(194, 57, 52, 0.2);
+    }
+    100% {
+        box-shadow: 0 2px 4px rgba(194, 57, 52, 0.1);
+    }
+}
