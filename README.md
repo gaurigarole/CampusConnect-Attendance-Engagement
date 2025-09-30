@@ -8,7 +8,7 @@ Built with **Lightning Web Components (LWC)**, powerful **Apex automation**, and
 
 ---
 ## 🎥 Project Demo  
-📺 **Live Demo Video:** [CampusConnect System Walkthrough](https://drive.google.com/file/d/1CBoI1GV6qiP_kZP-8bwXLvo7M5cogsb2/view?usp=drivesdk)  
+📺 **Live Demo Video:** [CampusConnect System Walkthrough](https://drive.google.com/file/d/1KDeNH7TMTX8Yy8NSjWkQkijg2KCX82nf/view?usp=drivesdk)  
 
 *Watch the complete system demonstration showcasing all features, user interfaces, and workflows in action.*  
 
